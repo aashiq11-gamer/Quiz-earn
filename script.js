@@ -37,14 +37,3 @@ function checkAnswer(choice) {
         currentQuestionIndex++;
         if (currentQuestionIndex >= questions.length) {
             alert("Congratulations! You've completed the game.");
-            window.open("https://your-external-link.com", "_blank"); // Replace with your external link
-        } else {
-            loadQuestion();
-        }
-    } else {
-        alert("Incorrect! Please try again.");
-        loadQuestion();
-    }
-}
-
-window.onload = loadQuestion;
