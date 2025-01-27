@@ -5,11 +5,13 @@ const questions = [
 ];
 
 let currentQuestionIndex = 0;
+let score = 0;
 
 function loadQuestion() {
     const questionElement = document.getElementById("question");
     const choicesElement = document.getElementById("choices");
     const resultElement = document.getElementById("result");
+    const scoreElement = document.getElementById("score");
 
     const currentQuestion = questions[currentQuestionIndex];
     questionElement.textContent = currentQuestion.question;
@@ -18,11 +20,12 @@ function loadQuestion() {
     currentQuestion.choices.forEach(choice => {
         const choiceButton = document.createElement("div");
         choiceButton.className = "choice";
-        choiceButton.style.backgroundColor = choice.toLowerCase();
+        choiceButton.textContent = choice;
         choiceButton.onclick = () => checkAnswer(choice);
         choicesElement.appendChild(choiceButton);
     });
 
+    scoreElement.textContent = `Score: ${score}`;
     resultElement.textContent = "";
 }
 
@@ -30,10 +33,11 @@ function checkAnswer(choice) {
     const currentQuestion = questions[currentQuestionIndex];
 
     if (choice === currentQuestion.answer) {
+        score += 10; // Add 10 points for a correct answer
         currentQuestionIndex++;
         if (currentQuestionIndex >= questions.length) {
             alert("Congratulations! You've completed the game.");
-            window.open("https://your-external-link.com", "_blank");
+            window.open("https://your-external-link.com", "_blank"); // Replace with your external link
         } else {
             loadQuestion();
         }
