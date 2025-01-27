@@ -4,7 +4,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f0f0f0;
+    background-color: #add8e6; /* Blue background */
     margin: 0;
 }
 
@@ -14,6 +14,31 @@ body {
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
+    width: 300px;
+    position: relative;
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#settings-icon, #withdraw-icon {
+    width: 30px;
+    cursor: pointer;
+}
+
+#score {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+#question {
+    font-weight: bold;
+    color: black;
+    font-size: 1.2em;
 }
 
 #choices {
@@ -21,13 +46,25 @@ body {
 }
 
 .choice {
-    display: inline-block;
-    width: 100px;
-    height: 100px;
-    margin: 10px;
+    display: block;
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    margin: 10px auto;
     cursor: pointer;
     border-radius: 5px;
+    background-color: #fff;
+    color: blue;
+    font-weight: bold;
+    border: 2px solid blue;
+    text-align: center;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.choice:hover {
+    background-color: blue;
+    color: white;
 }
 
 #result {
