@@ -40,6 +40,7 @@ body {
 #game-title {
     margin: 0;
     font-size: 1.5em;
+    text-align: center;
 }
 
 #question.bubble {
@@ -47,7 +48,7 @@ body {
     color: white;
     background-color: blue;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 10px;
     margin: 20px auto;
     width: fit-content;
     font-size: 1.2em;
@@ -65,7 +66,7 @@ body {
     line-height: 50px;
     margin: 10px auto;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 10px;
     background-color: black;
     color: white;
     font-weight: bold;
