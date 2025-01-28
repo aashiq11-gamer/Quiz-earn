@@ -42,7 +42,7 @@ body {
     font-size: 1.5em;
 }
 
-#question {
+#question.bubble {
     font-weight: bold;
     color: white;
     background-color: blue;
