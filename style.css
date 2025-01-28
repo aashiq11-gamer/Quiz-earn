@@ -23,7 +23,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 #settings-icon, #withdraw-icon {
@@ -34,11 +34,22 @@ body {
 #score {
     font-weight: bold;
     font-size: 1.2em;
+    margin: 0;
+}
+
+#game-title {
+    margin: 0;
+    font-size: 1.5em;
 }
 
 #question {
     font-weight: bold;
-    color: black;
+    color: white;
+    background-color: blue;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 20px auto;
+    width: fit-content;
     font-size: 1.2em;
 }
 
@@ -49,23 +60,24 @@ body {
 .choice {
     display: block;
     width: 100%;
+    max-width: 300px;
     height: 50px;
     line-height: 50px;
     margin: 10px auto;
     cursor: pointer;
     border-radius: 5px;
-    background-color: #fff;
-    color: blue;
+    background-color: black;
+    color: white;
     font-weight: bold;
-    border: 2px solid blue;
+    border: none;
     text-align: center;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s, color 0.3s;
 }
 
 .choice:hover {
-    background-color: blue;
-    color: white;
+    background-color: white;
+    color: black;
 }
 
 #result {
